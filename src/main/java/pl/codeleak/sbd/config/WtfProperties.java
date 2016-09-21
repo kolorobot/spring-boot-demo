@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 @ConfigurationProperties(prefix = "wtf")
 public class WtfProperties {
 
-    @Size(min = 10)
+    @Size(min = 2)
     @Getter
     @Setter
     private String welcomeMessage;

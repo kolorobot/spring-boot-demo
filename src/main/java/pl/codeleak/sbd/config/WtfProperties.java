@@ -5,7 +5,7 @@ import lombok.Setter;
 
 public class WtfProperties {
 
-    // @Size(min = 5)
+    // TODO Demonstrate validation of properties
     @Getter
     @Setter
     private String welcomeMessage;

@@ -1,21 +1,23 @@
 package pl.codeleak.sbd;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.context.annotation.Bean;
 
-// TODO Exclude some configurations
-@SpringBootApplication
+@SpringBootApplication(exclude = {JmxAutoConfiguration.class})
 public class SpringBootDemoApplication {
 
-    // TODO Inject a custom property from application.properties
+    @Value("${applicationName:}")
+    private String applicationName;
 
     @Bean
     public EmbeddedServletContainerCustomizer containerCustomizer() {
         return container -> {
             container.setSessionTimeout(60);
-            // TODO Set server header from injected property value and demonstrate
+            container.setServerHeader(applicationName);
         };
     }
 

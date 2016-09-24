@@ -23,8 +23,8 @@ public class TaskControllerSpringBoot2Test {
     @Test
     public void getsOne() {
         // arrange
-        given(taskRepository.getOne(1L))
-            .willReturn(new Task("Demo", false));
+        // TODO Use mocked repository here to arrange data
+
 
         // act
         ResponseEntity<Task> taskResponseEntity =

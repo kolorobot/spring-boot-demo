@@ -1,7 +1,6 @@
 package pl.codeleak.sbd.todo;
 
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.json.JacksonTester;
 
 import java.io.IOException;

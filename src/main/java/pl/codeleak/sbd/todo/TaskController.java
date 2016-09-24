@@ -16,6 +16,7 @@ public class TaskController {
     }
 
     // TODO POST /task
+    // TODO curl -i -X POST -H "Content-Type:application/json" -d "{\"title\": \"Task\"}" localhost:8080/task
     public ResponseEntity createTask(Task task) {
         return null;
     }

@@ -11,7 +11,6 @@ buildscript {
 }
 
 apply plugin: 'java'
-apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
 
 jar {
@@ -30,8 +29,8 @@ dependencies {
 	compile('org.projectlombok:lombok')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	// TODO Enable JPA and H2 database. Refresh the project and explore dependencies
-//	compile("org.springframework.boot:spring-boot-starter-data-jpa")
-//	compile("com.h2database:h2")
+	//	compile("org.springframework.boot:spring-boot-starter-data-jpa")
+	//	compile("com.h2database:h2")
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

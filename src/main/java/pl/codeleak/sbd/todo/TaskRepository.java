@@ -1,9 +1,14 @@
 package pl.codeleak.sbd.todo;
 
-// TODO Create repository with one custom method
-public interface TaskRepository {
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.query.Param;
 
-    // @Query("select t from Task t where t.done = :done")
-    // List<Task> findByDone(@Param("done") boolean done);
+import java.util.List;
+
+public interface TaskRepository extends PagingAndSortingRepository<Task, Long> {
+
+    @Query("select t from Task t where t.done = :done")
+    List<Task> findByDone(@Param("done") boolean done);
 
 }

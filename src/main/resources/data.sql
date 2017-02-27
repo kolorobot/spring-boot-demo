@@ -1,5 +1,3 @@
--- TODO Show data loading
-
 INSERT INTO `task` (id, title, done) VALUES (1, 'My task 1', FALSE);
 INSERT INTO `task` (id, title, done) VALUES (2, 'My task 2', TRUE);
 INSERT INTO `task` (id, title, done) VALUES (3, 'My task 3', FALSE);

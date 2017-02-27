@@ -4,14 +4,17 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.NotBlank;
 
-// TODO Enable task entity
-// @Entity
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 @Setter
 @Getter
 public class Task {
 
-    // @Id
-    // @GeneratedValue
+    @Id
+    @GeneratedValue
     private Long id;
 
     @NotBlank

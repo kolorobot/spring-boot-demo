@@ -29,19 +29,19 @@ public class TaskRepositoryDataJpaTest {
     }
 
     @Test
-    public void findsByTitle() {
+    public void findsByDone() {
         // TODO Implement the test
 
         // arrange
         entityManager.persist(new Task("Demo 1", true));
-        entityManager.persist(new Task("Demo 2", true));
+        entityManager.persist(new Task("Demo 2", false));
         entityManager.persist(new Task("Demo 3", true));
 
         // act
         List<Task> tasks = null;
 
         // assert
-        assertThat(tasks).hasSize(3);
+        assertThat(tasks).hasSize(2);
     }
 
 }

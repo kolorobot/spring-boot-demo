@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Spring Boot + AngularJS</title>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css"/>
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 75px;
+        }
+        
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+</head>
+<body ng-app="todoApp">
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Starter</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Todo</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Page Content -->
+<div class="container" ng-controller="TodoCtrl as vm" ng-cloak>
+    <div class="row">
+        <div class="col-md-4">
+            <form name="todoForm">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <textarea class="form-control" id="title" name="title" rows="5" ng-model="vm.task.title">
+                        
+                    </textarea>
+                </div>
+                <input type="button" class="btn btn-success" ng-click="vm.save(todoForm)" value="Save">
+            </form>
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Done</th>
+                </tr>
+                <tr ng-repeat="task in vm.tasks">
+                    <td>{{task.id}}</td>
+                    <td>{{task.title}}</td>
+                    <td>{{task.done}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../lib/angular/angular.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

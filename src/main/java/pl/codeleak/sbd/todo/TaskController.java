@@ -27,8 +27,8 @@ public class TaskController {
         return taskRepository.findOne(taskId);
     }
 
-    @PostMapping("/task")
     // curl -i -X POST -H "Content-Type:application/json" -d "{\"title\": \"Task\"}" localhost:8080/task
+    @PostMapping("/task")
     public ResponseEntity createTask(@Valid @RequestBody Task task) {
 
         taskRepository.save(task);

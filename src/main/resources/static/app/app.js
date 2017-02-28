@@ -27,9 +27,14 @@
             form.$setPristine();
         };
 
+        let refresh = function () {
+            init();
+        };
+
         vm.task = angular.copy(newTask);
         vm.tasks = [];
         vm.save = save;
+        vm.refresh = refresh;
     });
 
 })();

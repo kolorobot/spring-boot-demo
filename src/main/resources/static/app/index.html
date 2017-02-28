@@ -44,6 +44,7 @@
 <div class="container" ng-controller="TodoCtrl as vm" ng-cloak>
     <div class="row">
         <div class="col-md-4">
+            <h2>New Task</h2>
             <form name="todoForm">
                 <div class="form-group">
                     <label for="title">Title</label>
@@ -58,6 +59,8 @@
             </form>
         </div>
         <div class="col-md-8">
+            <h2>Tasks</h2>
+            <p><a href="#" class="btn btn-sm btn-success" ng-click="vm.refresh()">Refresh</a></p>
             <table class="table">
                 <tr>
                     <th>Id</th>

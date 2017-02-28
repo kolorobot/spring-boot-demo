@@ -32,9 +32,12 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile("com.h2database:h2")
-    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
-    compile("org.springframework.boot:spring-boot-devtools")
-    compile("org.springframework.boot:spring-boot-actuator")
+    // TODO Thymeleaf
+//    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+    // TODO Devtools
+//    compile("org.springframework.boot:spring-boot-devtools")
+    // TODO Actuator
+//    compile("org.springframework.boot:spring-boot-actuator")
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

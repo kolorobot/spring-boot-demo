@@ -13,7 +13,7 @@ import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/contact")
-public class ContractController {
+public class ContactController {
 
     @GetMapping
     public String contactForm(Model model) {

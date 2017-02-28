@@ -51,6 +51,9 @@
                         
                     </textarea>
                 </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" id="done" ng-model="vm.task.done">Done?</label>
+                </div>
                 <input type="button" class="btn btn-success" ng-click="vm.save(todoForm)" value="Save">
             </form>
         </div>

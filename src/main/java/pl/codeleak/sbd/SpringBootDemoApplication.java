@@ -6,7 +6,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import pl.codeleak.sbd.config.ApplicationProperties;
 
 import javax.annotation.PostConstruct;

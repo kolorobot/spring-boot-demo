@@ -8,7 +8,8 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-// @TODO Data Jpa tests
+// TODO Data Jpa tests
+// TODO Make sure spring.datasource.initialize is false (via @TestPropertySource)
 public class TaskRepositoryDataJpaTest {
 
     @Autowired

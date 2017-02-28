@@ -1,16 +1,26 @@
 package pl.codeleak.sbd;
 
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
+import pl.codeleak.sbd.config.ApplicationProperties;
 
-// TODO Exclude JmxAutoConfiguration
-// TODO Add logging via Lombok
-@SpringBootApplication
+import javax.annotation.PostConstruct;
+
+@SpringBootApplication(exclude = JmxAutoConfiguration.class)
+@Slf4j
 public class SpringBootDemoApplication {
 
-    // TODO Inject ApplicationProperties
+	@Autowired
+    private ApplicationProperties properties;
 
-    // TODO Inject a application property e.g. spring.profiles.active
+	@PostConstruct
+	public void init() {
+		ApplicationProperties.Application application = properties.getApplication();
+		log.info("{} {} {}", application.getName(), application.getVersion(), application.getUrl());
+	}
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootDemoApplication.class, args);

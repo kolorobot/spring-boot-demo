@@ -12,7 +12,7 @@ import static org.mockito.BDDMockito.given;
 // TODO Spring Boot Test with web environment and @MockBean
 // @RunWith(SpringRunner.class)
 // @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class TaskControllerSpringBoot2Test {
+public class TaskControllerTest {
 
     @Autowired
     private TestRestTemplate testRestTemplate;
